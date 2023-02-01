@@ -72,11 +72,11 @@ class Reflector
     /**
      * Initialize reflector.
      *
-     * @param QueryBuilder $queryBuilder
+     * @param QueryBuilder|Builder $queryBuilder
      * @param string       $sqlOperation The SQL operation to be performed
      * @param array        $values       The values to be saved
      */
-    public function __construct(QueryBuilder $queryBuilder, $sqlOperation = self::QUERY_TYPE_SELECT, $values = [])
+    public function __construct(QueryBuilder|Builder $queryBuilder, $sqlOperation = self::QUERY_TYPE_SELECT, $values = [])
     {
         $this->queryBuilder = $queryBuilder;
         $this->sqlOperation = $sqlOperation;
